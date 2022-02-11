@@ -3,55 +3,195 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/style.css">
-
+    <title>Prototipo Proyecto Final </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Css Conex-->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!--Encabezado-->
+    <!--Header:-->
     <header>
-        <h2>VeciMarket</h2>
-        <form id="formulario">
-            <input type="text" id="search" class="search" placeholder="Buscar">
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-cart-fill"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg></a>
-        </form>
-    </header>
-
-    <!--Contenido Principal-->
-    <main>
-        <div id="contenido">
-            <h2>contenido</h2>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="#" class="veci-Logo">VeciMarket</a>
+        <!--Navegacion-->
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Xdefinir</a>
+        </nav>
+        <!--Iconos de referencia para el usuario-->
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
         </div>
-    </main>
+    </header>
+    <!-- 1.Contenido "Principal" - Primer Slider con botones-->
+    <section class="contenedor-home">
+        <div class="slider active">
+            <div class="slide">
+                <div class="content">
+                    <span>Bienvenid@</span>
+                    <h3>VeciMarket</h3>
+                    <p>Parrafo para reflejar informacion del producto o los productos a delivery</p>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+                <div class="image">
+                    <img src="image/banner.png" class="market" alt="">
+                    <img src="images/home-text-1.png" class="text" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 1.1 Contenido "Principal" - Segundo Slider con botones-->
+        <div class="slider">
+            <div class="slide">
+                <div class="content">
+                    <span>Bienvenid@</span>
+                    <h3>VeciMarket</h3>
+                    <p>Parrafo para reflejar informacion del producto o los productos a delivery</p>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+                <div class="image">
+                    <img src="" class="market" alt="">
+                    <img src="" class="text" alt="">
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--1.2 Contenido "Principal" - Slider der/izq-->
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+    </section>
 
-    <!--Footer-->
-    <footer>
-        <h2> Copyraight </h2>
-    </footer>
+    <!-- 2.Tarjetas/cards de productos-->
+    <section class="products" id="products">
+        <h1 class="titulo">Productos<span> para ti </span> </h1>
+        <div class="box-container">
+            <!--Card 1-->
+            <div class="box">
+                <img src="image/p-1.png" alt="">
+                <div class="content">
+                    <h3>Leche Parmalat</h3>
+                    <div class="precio">$2000</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Comprar</a>
+                </div>
+            </div>
+            <!--Card 2-->
+            <div class="box">
+                <img src="image/p-2.png" alt="">
+                <<div class="content">
+                    <h3>Nutella</h3>
+                    <div class="precio">$ 14.000</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+        <!--Card 3-->
+        <div class="box">
+            <img src="image/p-3.png" alt="">
+            <div class="content">
+                <h3>Pan Tajado</h3>
+                <div class="precio">$5000</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">comprar</a>
+            </div>
+        </div>
+        <!--Card 4-->
+        <div class="box">
+            <img src="image/p-1.png" alt="">
+            <div class="content">
+                <h3>Leche Parmalat</h3>
+                <div class="precio">$2000</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+        <!--Card 5-->
+        <div class="box">
+            <img src="image/p-1.png" alt="">
+            <div class="content">
+                <h3>Leche Parmalat</h3>
+                <div class="precio">$2000</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+        <!--Card 6-->
+        <div class="box">
+            <img src="image/p-1.png" alt="">
+            <div class="content">
+                <h3>Leche Parmalat</h3>
+                <div class="precio">$2000</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- 3.POR DEFINIR: promociones -->
+    <section class="promocion" id="promocion">
+        <h1 class="titulo"> <span>Pro</span>mociones</h1>
+        Aqui se refiere la informacion de PROMOCIONES - OFERTAS
+        <div class="row"></div>
+    </section>
 
+    <!-- 4.POR DEFINIR: Opiniones de usuario -->
+    <section class="opinion" id="opinion">
+        <h1 class="titulo"> Opiniones/<span>/Localizacion</span> </h1>
+        <div class="box-container">
+        </div>
+    </section>
+    <!--5.Aqui se encuentra el Formulacion-->
+    <form></form>
 
+    <!--Paso 6 : se incluye el footer-->
+    <section class="footer">
+        <div class="box-container">
+            <div class="equipo">Creado por:<span>Team 11</span> @academiaGeek</div>
+        </div>
 
+        <!-- Js Conex -->
+        <!--<script src="main.js"></script>-->
 
-
-
-
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="./scripts/script.js"></script>
 </body>
-
 </html>
