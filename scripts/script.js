@@ -1,7 +1,7 @@
 import { productos } from "./data.js";
 
 const cards = document.getElementById('cards');
-let datos= [];
+let datos = [];
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,25 +56,25 @@ function mostrarCards() {
 
 //escucha el evento click y captura el id del botón, posterior a ello lo envía a la funcion Envio Datos
 
-cards.addEventListener('click', (e) =>{
+cards.addEventListener('click', (e) => {
     envioDatos(e.target.id);
 })
 
 //se busca el elemento en la data mediante un forEach que contenga el id de la tarjeta oprimida
 // y luego se procede a guardar en un objeto los datos nombre, precio y id, para ser usados mas adelante
 function envioDatos(id) {
-    productos.forEach(element =>{
-        if (element.id == id){
+    productos.forEach(element => {
+        if (element.id == id) {
 
             let algo =
             {
-            nombre: `${element.nombre}`,
-            precio: `${element.precio}`,
-            id : `${element.id}`
+                nombre: `${element.nombre}`,
+                precio: `${element.precio}`,
+                id: `${element.id}`
             }
 
             // agregar al arreglo datos, el objeto datos que contiene la informacion de la cards seleccionada
-            datos.push(algo); 
+            datos.push(algo);
 
             //agregar al localStorage los datos del objeto(datos)
             localStorage.setItem('Articulos', JSON.stringify(datos));
@@ -85,6 +85,6 @@ function envioDatos(id) {
             console.log(datos);
         }
     })
-    
+
 }
 

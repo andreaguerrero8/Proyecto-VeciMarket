@@ -17,10 +17,11 @@ export const productos = [
         },
         {
             "id": 3,
-            "nombre": "Allegra",
-            "imagen": "../image/allegra.jpg",
-            "precio": "43.120",
-            "categoria": "salud"
+            "nombre": "Alcohol",
+            "imagen": "../image/alcohol.png",
+            "precio": "7.000",
+            "categoria": "salud",
+            "oferta": true
 
         },
         {
@@ -52,7 +53,9 @@ export const productos = [
             "nombre": "Azucar",
             "imagen": "../image/azucar.jpg",
             "precio": "4.000",
-            "categoria": "cocina"
+            "categoria": "cocina",
+            "oferta": true
+
 
         },
         {
@@ -76,7 +79,9 @@ export const productos = [
             "nombre": "Coca-cola",
             "imagen": "../image/coca-cola.png",
             "precio": "2.600",
-            "categoria": "snacks"
+            "categoria": "snacks",
+            "oferta": true
+
 
         },
         {
@@ -100,7 +105,9 @@ export const productos = [
             "nombre": "Harina",
             "imagen": "../image/harina.png",
             "precio": "3.900",
-            "categoria": "cocina"
+            "categoria": "cocina",
+            "oferta": true
+
 
         },
         {
@@ -129,10 +136,12 @@ export const productos = [
         },
         {
             "id": 17,
-            "nombre": "Jabon",
+            "nombre": "Jabon Dove",
             "imagen": "../image/jabon.jpg",
             "precio": "11.400",
-            "categoria": "higiene"
+            "categoria": "higiene",
+            "oferta": true
+
 
         },
         {
@@ -156,7 +165,9 @@ export const productos = [
             "nombre": "Leche",
             "imagen": "../image/leche.png",
             "precio": "5.600",
-            "categoria": "cocina"
+            "categoria": "cocina",
+            "oferta": true
+
 
         },
         {
@@ -188,7 +199,9 @@ export const productos = [
             "nombre": "Nutella",
             "imagen": "../image/nutella.png",
             "precio": "17.600",
-            "categoria": "higiene"
+            "categoria": "snacks",
+            "oferta": true
+
 
         },
         {
@@ -196,15 +209,15 @@ export const productos = [
             "nombre": "Nutribela",
             "imagen": "../image/nutribela.jpg",
             "precio": "16.100",
-            "categoria": "snacks"
+            "categoria": "higiene"
 
         },
         {
             "id": 26,
-            "nombre": "Pan",
-            "imagen": "../image/pan.jpg",
-            "precio": "5.700",
-            "categoria": "cocina"
+            "nombre": "Lagrimas Artificiales",
+            "imagen": "../image/ojos.png",
+            "precio": "23.940",
+            "categoria": "salud"
 
         },
         {
@@ -257,7 +270,7 @@ export const productos = [
         },
         {
             "id": 33,
-            "nombre": "Todo Rico Bar B-Q",
+            "nombre": "Todo Rico BB-Q",
             "imagen": "../image/todo-rico.png",
             "precio": "1.440",
             "categoria": "snacks"
@@ -265,10 +278,11 @@ export const productos = [
         },
         {
             "id": 34,
-            "nombre": "Unesia",
-            "imagen": "../image/unesia.jpg",
-            "precio": "19.800",
-            "categoria": "higiene"
+            "nombre": "Allegra",
+            "imagen": "../image/allegra.jpg",
+            "precio": "43.120",
+            "categoria": "salud"
+
 
         },
         {
@@ -286,6 +300,40 @@ export const productos = [
             "precio": "29.440",
             "categoria": "higiene"
 
+        },
+        {
+            "id": 37,
+            "nombre": "Today Preservativos",
+            "imagen": "../image/preservativos.png",
+            "precio": "8.325",
+            "categoria": "salud"
+
+        },
+        {
+            "id": 38,
+            "nombre": "Pan",
+            "imagen": "../image/pan.jpg",
+            "precio": "5.700",
+            "categoria": "cocina"
+
+
+        },
+        {
+            "id": 39,
+            "nombre": "Buscapina Compositum NF",
+            "imagen": "../image/buscapina.png",
+            "precio": "12.240",
+            "categoria": "salud"
+
+        },
+        {
+            "id": 40,
+            "nombre": "Unesia",
+            "imagen": "../image/unesia.jpg",
+            "precio": "19.800",
+            "categoria": "higiene"
+
         }
+
 
     ]

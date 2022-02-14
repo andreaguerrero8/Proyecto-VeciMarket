@@ -241,6 +241,51 @@ header .icons a:hover{
   margin:2rem 1rem;
 }
 
+
+.promocion .row {
+  display: flex;
+  justify-content: space-between;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  align-items: center;
+}
+
+.promocion .row .box{
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  text-align: center;
+  background:#f9f9f9;
+  margin: 10px;
+}
+
+.promocion .row .box .content{
+  padding:1.1rem;
+}
+
+.promocion .row .box img{
+  height:20rem;
+  /*transform: rotate(-35deg);*/
+
+  margin:2rem 1rem;
+}
+
+.promocion .row .box .content h3{
+  color:var(--black);
+  font-size: 2.5rem;
+}
+
+.promocion .row .box .content .precio{
+  color:var(--black);
+  font-size: 2rem;
+  font-weight: bolder;
+  padding:1rem 0;
+}
+
+.promocion .row .box .content .precio span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
 /*.products .box-container .box:hover img{
   transform: rotate(-35deg) scale(1.2);
 }*/
