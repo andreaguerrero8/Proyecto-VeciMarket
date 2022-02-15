@@ -320,7 +320,7 @@ export const productos = [
         },
         {
             "id": 39,
-            "nombre": "Buscapina Compositum NF",
+            "nombre": "Buscapina",
             "imagen": "../image/buscapina.png",
             "precio": "12.240",
             "categoria": "salud"

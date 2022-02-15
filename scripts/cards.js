@@ -157,7 +157,6 @@ function mostrarHigiene(idHigiene) {
 
             let imgCard = document.createElement('img');
             imgCard.setAttribute('src', `${imagen}`);
-            imgCard.style.width = '100%';
 
 
             let contenedorCard = document.createElement('div');

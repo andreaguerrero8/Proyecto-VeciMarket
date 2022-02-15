@@ -264,17 +264,17 @@ header .icons a:hover{
   overflow-y: hidden;
   overflow-x: scroll;
   align-items: center;
-  width: 117rem;
   border-radius: 10px;
-  background-color: rgb(255, 251, 5);
+  
 }
 
 .promocion .row .box{
   border:.1rem solid rgba(0,0,0,.1);
   border-radius: .5rem;
   text-align: center;
-  background:#f9f9f9;
+  background:#ffffff;
   margin: 10px;
+  padding: 10px;
 }
 
 .promocion .row .box .content{
@@ -282,8 +282,8 @@ header .icons a:hover{
 }
 
 .promocion .row .box img{
-  height:15rem;
-  width: 150px;
+  height:23rem;
+  width: 20rem;
   /*transform: rotate(-35deg);*/
 }
 
@@ -422,7 +422,7 @@ header .icons a:hover{
 .formulario__input {
   padding: 20px;
   background: rgba(0,0,0,0.1);
-  border: 1px solid black);
+  border: 1px solid black;
   margin-bottom: 40px;
 }
 .formulario__input:focus {
