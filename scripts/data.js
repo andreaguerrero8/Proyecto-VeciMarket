@@ -3,7 +3,7 @@ export const productos = [
             "id": 1,
             "nombre": "Aceite",
             "imagen": "../image/aceite.jpg",
-            "precio": "16.200",
+            "precio": "16,200",
             "categoria":"cocina"
 
         },
@@ -11,7 +11,7 @@ export const productos = [
             "id": 2,
             "nombre": "Agua",
             "imagen": "../image/agua.png",
-            "precio": "2.000",
+            "precio": "2,000",
             "categoria": "cocina"
 
         },
@@ -19,7 +19,7 @@ export const productos = [
             "id": 3,
             "nombre": "Alcohol",
             "imagen": "../image/alcohol.png",
-            "precio": "7.000",
+            "precio": "7,000",
             "categoria": "salud",
             "oferta": true
 
@@ -28,7 +28,7 @@ export const productos = [
             "id": 4,
             "nombre": "Antiacido",
             "imagen": "../image/antiacido.jpg",
-            "precio": "11.650",
+            "precio": "11,650",
             "categoria": "salud"
 
         },

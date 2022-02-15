@@ -95,7 +95,7 @@ function mostrarSalud(idSalud) {
             salud.appendChild(fragmento);
 
         }
-    });
+    }); 
 }
 
 
@@ -156,7 +156,8 @@ function mostrarHigiene(idHigiene) {
             card.setAttribute('class', 'box');
 
             let imgCard = document.createElement('img');
-            imgCard.setAttribute('src', `${imagen}`)
+            imgCard.setAttribute('src', `${imagen}`);
+            imgCard.style.width = '100%';
 
 
             let contenedorCard = document.createElement('div');
@@ -167,7 +168,7 @@ function mostrarHigiene(idHigiene) {
 
             let precios = document.createElement('div');
             precios.setAttribute('class', 'precio');
-            precios.textContent = `$ ${precio}`;
+            precios.textContent = `${precio}`;
 
             card.appendChild(imgCard);
             card.appendChild(contenedorCard);

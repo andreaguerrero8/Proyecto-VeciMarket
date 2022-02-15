@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Concert+One&family=Great+Vibes&family=Quintessential&display=swap" rel="stylesheet">
     <!-- Css Conex-->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,20 +19,20 @@
     <header>
 
         <div id="menu-bar" class="fas fa-bars"></div>
-        <a href="#" class="veci-Logo">VeciMarket</a>
+        <a href="#" class="veci-Logo">Vecimarket</a>
 
         <!--Navegacion-->
         <nav class="navbar">
             <a href="./index.html">Inicio</a>
             <a href="./page/productos.html">Productos</a>
             <a href="./page/ofertas.html">Ofertas</a>
-            <a href="#">Xdefinir</a>
+            <a href="#cocina">Catalogo</a>
         </nav>
 
         <!--Iconos de referencia para el usuario-->
         <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-user"></a>
+            <a href="page/carrito.html" class="fas fa-shopping-cart"></a>
+            <a href="#opinion" class="fas fa-user"></a>
         </div>
     </header>
 
@@ -40,53 +43,25 @@
             <div class="slide">
                 <div class="content">
                     <span>Bienvenid@</span>
-                    <h3>VeciMarket</h3>
-                    <p>Parrafo para reflejar informacion del producto o los productos a delivery</p>
-                    <a href="#" class="btn">Comprar</a>
+                    <h3 class="intro">VeciMarket</h3>
+                    <p>Disfruta de nuestras promociones</p>
+                    <a href="page/productos.html" class="btn">Comprar</a>
                 </div>
                 <div class="image">
-                    <img src="image/banner.png" class="market" alt="">
-                    <img src="images/home-text-1.png" class="text" alt="">
+                    <img src="image/banner-1.png" class="market" alt="">
                 </div>
             </div>
         </div>
-
-        <!-- 1.1 Contenido "Principal" - Segundo Slider con botones-->
-        <div class="slider">
-            <div class="slide">
-                <div class="content">
-                    <span>Bienvenid@</span>
-                    <h3>VeciMarket</h3>
-                    <p>Parrafo para reflejar informacion del producto o los productos a delivery</p>
-                    <a href="#" class="btn">Comprar</a>
-                </div>
-                <div class="image">
-                    <img src="" class="market" alt="">
-                    <img src="" class="text" alt="">
-                </div>
-            </div>
-        </div>
-
-
-        <!--1.2 Contenido "Principal" - Slider der/izq-->
-        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
-        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
-    </section>
-
-
-
-
+        
     <!-- 3.Cocina-->
     <section class="promocion">
-        <h1 class="titulo"> <span>Co</span>cina</h1>
-        <div class="row" id="cocina">
-
-        </div>
+        <h1 class="titulo"> Coci<span>na</span></h1>
+        <div class="row" id="cocina"></div>
     </section>
 
      <!-- 3.Cocina-->
      <section class="promocion">
-        <h1 class="titulo"> <span>Sna</span>cks</h1>
+        <h1 class="titulo">Sna<span>cks</span></h1>
         <div class="row" id="snacks">
 
         </div>
@@ -94,7 +69,7 @@
 
      <!-- 3.Cocina-->
      <section class="promocion">
-        <h1 class="titulo"> <span>Sa</span>lud</h1>
+        <h1 class="titulo">Sa<span>lud</span></h1>
         <div class="row" id="salud">
 
         </div>
@@ -102,7 +77,7 @@
 
      <!-- 3.Cocina-->
      <section class="promocion">
-        <h1 class="titulo"> <span>Hig</span>iene</h1>
+        <h1 class="titulo">Hig<span>iene</span></h1>
         <div class="row" id="higiene">
 
         </div>
@@ -111,24 +86,68 @@
 
 
 
-    <!-- 4.POR DEFINIR: Opiniones de usuario -->
+    <!-- 4.Opinion -Form-->
     <section class="opinion" id="opinion">
-        <h1 class="titulo"> Opiniones/<span>/Localizacion</span> </h1>
+        <h1 class="titulo">Regis<span>tro</span> </h1>
         <div class="box-container">
+
+            <form action="" class="formulario">
+                <h1 class="formulario__titulo">Por favor ingrese sus datos</h1>
+                <input type="text" class="formulario__input" placeholder="Nombre">
+                <input type="email" class="formulario__input" placeholder="@Correo.gmail">
+                <a href="page/productos.html" class="btn">Comprar</a>
+
+                
+              </form>
         </div>
     </section>
 
-    <!--5.Aqui se encuentra el Formulacion-->
-    <form></form>
+   
 
-    <!--Paso 6 : se incluye el footer-->
-    <section class="footer">
-        <div class="box-container">
-            <div class="equipo">Creado por:<span>Team 11</span> @academiaGeek</div>
+    <!--Paso 6 :footer-->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Ubicación</h3> 
+            <a href="#">Bogotá</a>
+
         </div>
+
+        <div class="box">
+            <h3>Menu links</h3>
+            <a href="#">Home</a>
+            <a href="productos.html">Productos</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="#">Catalogo</a>
+            <a href="#">Registro</a>
+        </div>
+
+        <div class="box">
+            <h3>Team 11</h3>
+            <a href="#">Andreina Rodriguez</a>
+            <a href="#">Alcelis Del Valle Rosas</a>
+            <a href="#">Gabriel Mancilla</a>
+        </div>
+
+        <div class="box">
+            <h3>Contactanos</h3>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+        <div class="credit">Creado por: Team 11 - @AcademiGeek</div>
+
+    </div>
+
+</section>
+
 
         <!-- Js Conex -->
         <script src="./scripts/cards.js" type="module"></script>
+        <script src="./scripts/slider.js" type="module"></script>
+
     </section>
 </body>
 
