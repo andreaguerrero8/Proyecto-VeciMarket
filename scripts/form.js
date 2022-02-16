@@ -4,8 +4,8 @@ document.getElementById("form_sumbit").addEventListener("click", function (event
     let nombre = document.getElementById("name").value;
     let correo = document.getElementById("email").value;
     let contrasena = document.getElementById("clave").value;
-//Validacion de campos
 
+    //Validacion de campos
 if(nombre == ""){
     alert("Por favor incluir Nombre");
 }else if(correo == ""){
@@ -13,6 +13,7 @@ if(nombre == ""){
 }else if(contrasena == ""){
     alert("Por favor incluir Contrasena");
 }
+//Informacion que se guarda en el localstorage
 else{
     localStorage.setItem('name', nombre);
     localStorage.setItem('email', correo);

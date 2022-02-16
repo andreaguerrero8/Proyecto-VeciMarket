@@ -53,11 +53,18 @@ function mostrarCards() {
     });
 
 }
+//Integramos variables para el carrito productos-ofertas
+let noti = document.querySelector('h2');
+let contador = document.getElementById('contador');
+//Comienzo desde 0
+noti.value = 0;
 
 //escucha el evento click y captura el id del botón, posterior a ello lo envía a la funcion Envio Datos
-
 cards.addEventListener('click', (e) => {
     envioDatos(e.target.id);
+    //Contador de carrito 
+    noti.value = parseInt(noti.value) + 1;
+    contador.innerHTML = noti.value;
 })
 
 //se busca el elemento en la data mediante un forEach que contenga el id de la tarjeta oprimida
@@ -82,7 +89,7 @@ function envioDatos(id) {
             //traer datos del localStorage 
             localStorage.getItem('Articulos');
 
-            console.log(datos);
+
         }
     })
 

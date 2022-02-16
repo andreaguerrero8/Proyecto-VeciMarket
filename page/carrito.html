@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="">
-    
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-<header>
-        
+
+
     <!-- Productos-->
+
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="#" class="veci-Logo">Vecimarket</a>
+
+        <!--Navegacion-->
+        <nav class="navbar">
+            <a href="./index.html">Inicio</a>
+            <a href="./page/productos.html">Productos</a>
+            <a href="./page/ofertas.html">Ofertas</a>
+            <a href="#cocina">Catalogo</a>
+        </nav>
+
+        <!--Iconos de referencia para el usuario-->
+        <div class="icons">
+            <a href="page/carrito.html" class="fas fa-shopping-cart"></a>
+            <a href="#opinion" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <main>
-    <div id="container_info">
-        <center>
-        <div class = "producto">
-            <p>Producto:</p>
-            <div id="nombreProducto-contenedor"><!--Inserto P de Js--></div>
+        <br>
+        <div id="container_info">
+            <br>
+                <div class="producto">
+                    <p>Producto:</p>
+                    <div id="nombreProducto-contenedor">
+                        <!--Inserto P de Js-->
+                    </div>
+                </div>
+                <br>
+                <div class="total">
+                    <p>total:</p>
+                    <div id="totalProducto-contenedor"></div>
+                </div>
         </div>
-
-        <div class = "total">
-            <p>total:</p>
-            <div id="totalProducto-contenedor"></div>
-        </div>
-
-        <a href="form-1.html"><button onclick="myFunction()">Click me</button></a>
-            </div>
-        </main>
+        <br>
+        <a href="form-1.html"><button class="bton" onclick="myFunction()">Click me</button></a>
+        <br>
+    </main>
 
 </body>
 <!-- Enlaces Js-->
 <script src="../scripts/carrito.js"></script>
+
 </html>
