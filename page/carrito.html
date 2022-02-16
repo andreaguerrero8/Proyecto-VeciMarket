@@ -5,16 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+    <!--Css conex Icons - Boot-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <!--Conex Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Concert+One&family=Great+Vibes&family=Quintessential&display=swap"
+        rel="stylesheet">
+    <!--Conex Css-->
+    <link rel="stylesheet" href="../style.css">
 
 </head>
 
 <body>
     <header>
-        <br>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="../index.html" class="veci-Logo">Vecimarket</a>
+
+    </header>
+    <main>
+
         <div id="container_info">
+            <br>
+            <h3 class="vecifactura">VeciFactura</h3>
             <br>
             <div class="producto">
                 <p>Producto:</p>
@@ -24,47 +41,60 @@
             </div>
             <br>
             <div class="total">
-                <p>total:</p>
+                <p>Total:</p>
                 <div id="totalProducto-contenedor"></div>
+                <!--Inserto P de Js-->
             </div>
 
-            <a href="#" class="btn_limpiar" onclick="limpiarLista()"><i class="fas fa-trash-alt"></i></a>
+            <a href="#" class="btn_limpiar"><button class="bton" onclick="myFunction()">Borrar</button></a>
+            <a href="#" class="money" onclick="" data-toggle="modal" data-target="#myModal"><button class="bton"
+                    onclick="myFunction()">Pagar</button></a>
 
-            <a href="#" class="money" onclick="" data-toggle="modal" data-target="#myModal"><button class="bton" onclick="myFunction()">Click me</button></a>
-            <a href="#" class="btn_limpiar" onclick=><i class="fas fa-share-square"></i></a>
-
+            <br>
         </div>
-        <!-- Modal-->
         </div>
 
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal contentido-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">VeciMarket</h4>
-                    </div>
-                    <div class="modal-body">
+    </main>
+    <!-- Modal-->
 
-                        <h1 class="formulario__titulo">Informacion de pago</h1>
-                        <form class="formulario">
-                            <input type="text" id="name" class="formulario__input" placeholder="Nombre" required>
-                            <input type="email" id="email" class="formulario__input" placeholder="Email" required>
-                            <input type="password" id="clave" class="formulario__input" placeholder="Ingresa tu clave" required>
-                            <button id="form_sumbit" class="formulario__submit">Enviar</button>
-                        </form>
-                    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal contentido-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">VeciMarket</h4>
                 </div>
+                <div class="modal-body">
+
+                    <h1 class="formulario__titulo">Informacion de pago</h1>
+                    <form class="formulario">
+                        <input type="text" id="name" class="formulario__input" placeholder="Nombre" required>
+                        <input type="email" id="email" class="formulario__input" placeholder="Email" required>
+                        <input type="password" id="clave" class="formulario__input" placeholder="Ingresa tu clave"
+                            required>
+                        <button id="form_sumbit" class="formulario__submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
 
 
 </body>
+<!--style-->
+<style>
+    body {
+        background-image: url(../image/banner-carrito.png);
+        background-repeat: no-repeat;
+        background-position: 40px 100px;
+    }
+</style>
 <!-- Conex Js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="../scripts/script.js" type="module"></script>
 <script src="../scripts/carrito.js" type="module"></script>
 <script src="../scripts/form.js"></script>
+<script src="../scripts/slider.js" type="module"></script>
 
 
 </html>

@@ -1,608 +1,650 @@
-
 /*Variables definidas*/
-:root{
-  --white:#ffffff;
-  --black:#000000;
-}
-/* selector universal y alude a todos los elementos que están contenidos dentro de otro*/
-*{
-  font-family:arial;
-  margin: 0;
-   padding:0;
-  box-sizing: border-box;
-  outline: none; 
-  border:none;
-  text-decoration: none;
-  transition: all .2s linear;
-}
-/*Elementos*/
-html{
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-padding-top:6rem;
-  scroll-behavior: smooth;
-}
-body{
-  background-color:rgba(230, 230, 230, 0.794);
-}
 
-section{
-  padding:2rem 9%;
-}
-/*Titulos principales */
-.titulo{
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 4rem;
-  color:var(--black);
-  padding:1rem;
-}
-
-.titulo span{
-  text-transform: uppercase;
-  color:blueviolet;
-}
-/*Botones "general"*/
-.btn{
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: .5rem;
-  font-weight: bolder;
-  font-size: 1.7rem;
-  color:var(--black);
-  cursor: pointer;
-  background:rgb(132, 0, 255);
-  color:white;
-  padding:.8rem 3rem;
-}
-
-.btn:hover{
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: .5rem;
-  font-weight: bolder;
-  font-size: 1.7rem;
-  color:rgb(255, 255, 255);
-  cursor: pointer;
-  background:rgb(255, 137, 1);
-  padding:.8rem 3rem;
-}
-/*Boton carrito -formulario*/
-.bton{
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: .5rem;
-  font-weight: bolder;
-  font-size: 1.7rem;
-  cursor: pointer;
-  background:rgb(0, 0, 0);
-  color:white;
-  padding:.8rem 3rem;
-  text-align: center;
-}
-
-.bton:hover{
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: .5rem;
-  font-weight: bolder;
-  font-size: 1.7rem;
-  color:rgb(255, 255, 255);
-  cursor: pointer;
-  background:rgb(255, 137, 1);
-  padding:.8rem 3rem;
-}
-/*Header*/
-header{
-  position: fixed;
-  top:0; left:0; right:0;
-  z-index: 1000;
-  background: rgb(132, 0, 255);
-  padding:2rem 9%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-}
-
-header .veci-Logo{
-  font-size: 2.5rem;
-  color:whitesmoke;
-}
-
-header .navbar a{
-  background-color: rgb(132, 0, 255);
-  font-size: 1.7rem;
-  color:rgb(0, 0, 0);
-  margin:0 1rem;
-}
-
-header .navbar a:hover{
-  color:var(--grey);
-}
-
-header .icons a{
-  font-size: 2.5rem;
-  color:whitesmoke;
-  margin-left:1.5rem;
-}
-
-header .icons a:hover{
-  color:orange;
-}
-
-#menu-bar{
-  font-size: 2.5rem;
-  padding: .5rem 1.5rem;
-  border:.1rem solid var(--black);
-  color:var(--black);
-  border-radius: .3rem;
-  cursor: pointer;
-  display: none;
-  background-color: rgb(132, 0, 255);
-}
-
-.contenedor-home{
-  padding:0;
-  position:relative;
-  
-}
-.intro{
-  font-family: 'Concert One', cursive;
-  font-size: 2rem;
-}
-
-.contenedor-home .slider .slide{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap:1.5rem;
-  padding:0 9%;
-  padding-top: 9rem;
-}
-
-.contenedor-home .slider .slide .content{
-  flex:1 1 40rem;
-  animation: slideContent .5s linear 1s backwards;
-}
-
-@keyframes slideContent{
-  0%{
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-}
-
-.contenedor-home .slider .slide .image{
-  flex:1 1 50rem;
-  padding-bottom: 15rem;
-  position: relative;
-  z-index: 0;
-}
-/*Prueba de animacion - Banner Principal*/
-.contenedor-home .slider .slide .image .market{
-  width:100%;
- 
-  animation:market .3s linear;
-}
-
-@keyframes market{
-  0%{
-    transform: rotate(0deg) scale(.5);
-  }
-}
-
-.contenedor-home .slider .slide .image .text{
-  position: absolute;
-  top:0; left:0;
-  z-index: -1;
-  animation:marketText .5s linear .5s backwards;
-}
-
-@keyframes veciText{
-  0%{
-    opacity: 0;
-    top:-10rem;
-  }
-}
-
-.contenedor-home .slider .slide .content span{
-  font-size: 2rem;
-  color:var(--grey);
-}
-
-.contenedor-home .slider .slide .content h3{
-  font-size: 5rem;
-  color:var(--grey);
-}
-
-.contenedor-home .slider .slide .content p{
-  font-size: 1.7rem;
-  color:#666;
-  padding:.5rem 0;
-}
-.contenedor-home .slider{
-  display: none;
-}
-.contenedor-home .slider.active{
-  display: block;
-}
-/*Deslizador derecha /izquierda Slider*/
-.contenedor-home #prev,
-.contenedor-home #next{
-  position: absolute;
-  top:50%; 
-  transform:translateY(-50%);
-  border-radius: 50%;
-  z-index: 100;
-  height:5rem;
-  width:5rem;
-  line-height: 4.5rem;
-  font-size: 2rem;
-  color:var(--black);
-  border:.2rem solid var(--black);
-  cursor: pointer;
-  text-align: center;
-}
-
-/*Direcciones de botones de home*/
-
-.contenedor-home #prev{
-  left:3rem;
-}
-
-.contenedor-home #next{
-  right:3rem;
+ :root {
+    --white: #ffffff;
+    --black: #000000;
 }
 
 
-.products .box-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap:1.5rem;
+/* 1.selector universal y alude a todos los elementos que están contenidos dentro de otro*/
+
+* {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
 }
 
-.products .box-container .box{
-  border:.1rem solid rgba(0,0,0,.1);
-  border-radius: .5rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background:#f9f9f9;
-  flex:1 1 30rem;
+
+/* 2.Elementos y componentes glb*/
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
 }
 
-.products .box-container .box .content{
-  padding:1.1rem;
+body {
+    background-color: rgba(230, 230, 230, 0.794);
 }
 
-.products .box-container .box img{
-  height:20rem;
-  /*transform: rotate(-35deg);*/
+section {
+    padding: 2rem 9%;
 
-  margin:2rem 1rem;
 }
 
+#contador {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    text-align: center;
+}
+
+
+/* 3.Titulos principales glb*/
+
+.titulo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: var(--black);
+    padding: 1rem;
+
+}
+
+.titulo span {
+    text-transform: uppercase;
+    color: rgb(132, 0, 255);
+
+    text-shadow: 0.1em 0.1em 0.1em rgb(31, 31, 31);
+}
+
+
+/* 4.Botones glb*/
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    color: var(--black);
+    cursor: pointer;
+    background: rgb(132, 0, 255);
+    color: white;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: rgb(255, 137, 1);
+    padding: .8rem 3rem;
+}
+
+
+/* 4.1 Botones referencia a carrito.html*/
+
+.btn_limpiar {
+    color: white;
+    font-size: 3rem;
+}
+
+.bton {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    color: white;
+    padding: .8rem 3rem;
+    text-align: center;
+}
+
+.bton:hover {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: rgb(255, 137, 1);
+    padding: .8rem 3rem;
+}
+
+.formulario__submit {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background: orange;
+    color: white;
+    padding: .8rem 3rem;
+    text-align: center;
+    ;
+}
+
+.formulario1 {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 25%;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: orange;
+    color: rgb(0, 0, 0);
+    padding: .8rem 3rem;
+    text-align: center;
+}
+.formulario1-1{
+    width: 80%;
+    height: 5rem;
+
+padding: 1rem;
+
+    
+}
+
+
+
+
+
+
+/* 5.Seccion de Menu : se encuentra en todas las pestañas*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgb(132, 0, 255);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .veci-Logo {
+    font-size: 2.6rem;
+    font-family: 'Concert One', cursive;
+    color: rgb(255, 255, 255);
+
+    text-shadow: 0.1em 0.1em 0.1em rgb(31, 31, 31);
+}
+
+header .navbar a {
+    background-color: rgb(132, 0, 255);
+    font-size: 1.8rem;
+    color: whitesmoke;
+    margin: 0 1rem;
+}
+
+header .navbar a:hover {
+    color: orange;
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: orange;
+    margin-left: 1.5rem;
+    text-shadow: 0.1em 0.1em 0.1em rgb(31, 31, 31);
+}
+
+header .icons a:hover {
+    color: white;
+}
+
+
+/* 5.1 Hamburger -responsive*/
+
+#menu-bar {
+    font-size: 2.5rem;
+    padding: .5rem 1.5rem;
+    border: .1rem solid var(--black);
+    color: var(--black);
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+    background-color: rgb(132, 0, 255);
+}
+
+
+/*6.Contenido "Principal" - Slider*/
+
+.contenedor-home {
+    padding: 0;
+    position: relative;
+}
+
+.intro {
+    font-family: 'Concert One', cursive;
+    color: orange;
+    text-shadow: 0.1em 0.1em 0.1em rgb(31, 31, 31);;
+}
+
+.contenedor-home .slider .slide {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 9%;
+    padding-top: 9rem;
+}
+
+.contenedor-home .slider .slide .content {
+    flex: 1 1 40rem;
+    animation: slideContent .5s linear 1s backwards;
+}
+
+@keyframes slideContent {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+}
+
+.contenedor-home .slider .slide .image {
+    flex: 1 1 50rem;
+    padding-bottom: 15rem;
+    position: relative;
+    z-index: 0;
+}
+
+
+/*6.1 Prueba de animacion - Banner Principal*/
+
+.contenedor-home .slider .slide .image .market {
+    width: 100%;
+    animation: market .3s linear;
+}
+
+@keyframes market {
+    0% {
+        transform: rotate(0deg) scale(.5);
+    }
+}
+
+.contenedor-home .slider .slide .image .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: marketText .5s linear .5s backwards;
+}
+
+@keyframes veciText {
+    0% {
+        opacity: 0;
+        top: -10rem;
+    }
+}
+
+.contenedor-home .slider .slide .content span {
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+.contenedor-home .slider .slide .content h3 {
+    font-size: 7rem;
+    color: rgb(132, 0, 255)
+}
+
+.contenedor-home .slider .slide .content p {
+    font-size: 1.7rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.contenedor-home .slider {
+    display: none;
+}
+
+.contenedor-home .slider.active {
+    display: block;
+}
+
+
+/*7. Seccion de Productos - Promociones -Row*/
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #f9f9f9;
+    flex: 1 1 30rem;
+}
+
+.products .box-container .box .content {
+    padding: 1.1rem;
+}
+
+.products .box-container .box img {
+    height: 20rem;
+    /*transform: rotate(-35deg);*/
+    margin: 2rem 1rem;
+}
 
 .promocion .row {
-  display: flex;
-  justify-content: space-between;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  align-items: center;
-  border-radius: 10px;
-  
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    align-items: center;
+    border-radius: 10px;
+
 }
 
-.promocion .row .box{
-  border:.1rem solid rgba(0,0,0,.1);
-  border-radius: .5rem;
-  text-align: center;
-  background:#ffffff;
-  margin: 10px;
-  padding: 10px;
+.promocion .row .box {
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-align: center;
+    background: #ffffff;
+    margin: 10px;
+    padding: 10px;
 }
 
-.promocion .row .box .content{
-  padding:1.1rem;
+.promocion .row .box .content {
+    padding: 1.1rem;
 }
 
-.promocion .row .box img{
-  height:23rem;
-  width: 20rem;
-  /*transform: rotate(-35deg);*/
+.promocion .row .box img {
+    height: 23rem;
+    width: 20rem;
+    /*transform: rotate(-35deg);*/
 }
 
-.promocion .row .box .content h3{
-  color:var(--black);
-  font-size: 1.8rem;
+.promocion .row .box .content h3 {
+    color: var(--black);
+    font-size: 1.8rem;
+
 }
 
-.promocion .row .box .content .precio{
-  color:var(--black);
-  font-size: 1.5rem;
-  font-weight: bolder;
-  padding:1rem 0;
+.promocion .row .box .content .precio {
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
 }
 
-.promocion .row .box .content .precio span{
-  font-size: 1.5rem;
-  text-decoration: line-through;
+.promocion .row .box .content .precio span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
 }
+
 
 /*.products .box-container .box:hover img{
-  transform: rotate(-35deg) scale(1.2);
+transform: rotate(-35deg) scale(1.2);
 }*/
 
-.products .box-container .box .icons{
-  display: flex;
-  flex-flow: column;
-  position: absolute;
-  top:.5rem; left:-10rem;
-}
-
-.products .box-container .box:hover .icons{
-  left:1rem;
-}
-
-.products .box-container .box .icons a{
-  height:4.5rem;
-  width:5rem;
-  line-height: 4.5rem;
-  font-size: 2rem;
-  color:var(--black);
-  border:.1rem solid var(--black);
-  border-radius: .5rem;
-  background:#fff;
-  margin-top: .5rem;
-}
-
-.products .box-container .box .icons a:hover{
-  background:var(--grey);
-  color:#fff;
-}
-
-.products .box-container .box .content h3{
-  color:var(--black);
-  font-size: 2.5rem;
-}
-
-.products .box-container .box .content .precio{
-  color:var(--black);
-  font-size: 2.5rem;
-  font-weight: bolder;
-  padding:1rem 0;
-}
-
-.products .box-container .box .content .precio span{
-  font-size: 1.5rem;
-  text-decoration: line-through;
-}
-
-.products .box-container .box .content .stars{
-  padding-bottom: 1rem;
-}
-
-.products .box-container .box .content .stars i{
-  font-size: 1.7rem;
-}
-
-.opinion .box-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap:1.5rem;
-}
-
-.opinion .box-container{
-  flex:1 1 30rem;
-  text-align: center;
-  border:.1rem solid rgba(0,0,0,.1);
-  border-radius: .5rem;
-  background:#f9f9f9;
-  padding:2rem;
-}
-
-.opinion .box-container img{
-  border-radius: 50%;
-  object-fit: cover;
-  height:15rem;
-  width:15rem;
-  margin:1rem 0;
-}
-
-.opinion .box-container h3{
-  font-size: 2.5rem;
-  color:var(--black);
-}
-
-.opinion .box-container p{
-  font-size: 1.6rem;
-  color:#666;
-  padding:1rem 0;
-}
-
-.opinion .box-container .stars i{
-  font-size: 2rem;
-}
-/*Visual-carrito*/
-main{
-  background-color: rgb(132, 0, 255);
-  margin-top: 25px;
-  margin-left: 35%;
-  width: 30%;
-  max-height: 70rem;
-  min-height: 10rem;
-  font-size:2rem;
-  text-align: center;
-  color:hsl(0, 0%, 98%);
-  border-radius:15px;
-}
-
-/*Form*/
-.formulario {
-  width: 500px;
-  max-width: 100%;
-  margin: auto;
-  margin-top: 30px;
-  padding: 20px;
-  box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
-  position: relative;
-}
-.formulario__titulo {
-  text-align: center;
-  margin-top: 0;
-  color: black;
-  background-color: whitesmoke;
-}
-.formulario__input, .formulario__label, .formulario__submit {
-  display: block;
-  width: 100%;
-  font-size: 1.3em;
-}
-.formulario__input {
-  padding: 20px;
-  background: rgba(0,0,0,0.1);
-  border: 1px solid black;
-  margin-bottom: 40px;
-}
-.formulario__input:focus {
-  outline: 1px solid black;
-}
-.formulario__input:focus + .formulario__label{
-  margin-top: -135px;
-}
-.formulario__label {
-  padding-left: 15px;
-  position: absolute;
-  margin-top: -85px;
-  z-index: -20;
-  color:white;
-  transition: all 0.2s;
-}
-.formulario__submit {
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  border: none;
-}
-
-/*Footer*/
-.footer .box-container{
-  border:.1rem solid rgba(0,0,0,.1);
-  border-radius: .5rem;
-  background:rgb(132, 0, 255);
-  color:white;
-  padding:2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap:1.5rem;
-}
-
-.footer .box-container .box{
-  flex:1 1 20rem;
-}
-
-.footer .box-container .box h3{
-  color:var(--black);
-  font-size: 2.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.footer .box-container .box a{
-  color:rgb(0, 0, 0);
-  font-size: 1.5rem;
-  padding-bottom: 1.5rem;
-  display: block;
-}
-
-.footer .box-container .box a:hover{
-  color:rgb(0, 238, 255);
-}
-
-.footer .box-container .credit{
-  text-align: center;
-  width:100%;
-  border-top: .1rem solid rgba(0,0,0,.1);
-  font-size: 1.5rem;
-  padding:1rem;
-  padding-top: 2rem;
-  color:rgb(0, 0, 0);
-}
-
-.footer .box-container .credit span{
-  color:rgb(132, 0, 255);
-}
-
-/* media queries  */
-@media (max-width:991px){
-  html{
-    font-size: 55%;
-  }
-  header{
-    padding:2rem;
-  }
-  section{
-    padding:2rem;
-  }
-
-}
-
-@media (max-width:768px){
-  #menu-bar{
-    display: block;
-  }
-
-  header .navbar{
+.products .box-container .box .icons {
+    display: flex;
+    flex-flow: column;
     position: absolute;
-    top:100%; left:-120%;
-    width:100%;
-    background:#eee;
-    border-top: .1rem solid rgba(0,0,0,.1);
-  }
+    top: .5rem;
+    left: -10rem;
+}
 
-  header .navbar.active{
-    left:0;
-  }
+.products .box-container .box:hover .icons {
+    left: 1rem;
+}
 
-  header .navbar a{
+.products .box-container .box .icons a {
+    height: 4.5rem;
+    width: 5rem;
+    line-height: 4.5rem;
     font-size: 2rem;
-    background:#fff;
-    border:.1rem solid var(--black);
+    color: var(--black);
+    border: .1rem solid var(--black);
     border-radius: .5rem;
-    padding:1.5rem;
-    margin:1.5rem;
-    display: block;
+    background: ;
+    margin-top: .5rem;
+}
+
+.products .box-container .box .icons a:hover {
+    color: #fff;
+}
+
+.products .box-container .box .content h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .precio {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+}
+
+.products .box-container .box .content .precio span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.products .box-container .box .content .stars {
+    padding-bottom: 1rem;
+}
+
+.products .box-container .box .content .stars i {
+    font-size: 1.7rem;
+}
+
+.opinion .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.opinion .box-container {
+    flex: 1 1 30rem;
     text-align: center;
-  }
-
-  .contenedor-home .slider .slide .image .text{
-    width:60%;
-  }
-
-  .contenedor-home #prev,
-  .contenedor-home #next{
-    top:85%;
-  }
-
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: #f9f9f9;
+    padding: 2rem;
 }
 
-@media (max-width:400px){
+.opinion .box-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+    margin: 1rem 0;
+}
 
-  html{
-    font-size: 50%;
-  }
+.opinion .box-container h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
 
-  .contenedor-home .slider .slide .image{
-    padding-bottom: 6rem;
-  }
+.opinion .box-container p {
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1rem 0;
+}
 
-  .titulo{
-    font-size: 3rem;
-  }
+.opinion .box-container .stars i {
+    font-size: 2rem;
 }
 
 
+/*8.Visual carrito.html -Factura y Modal de pago*/
 
+main {
+    background-color: rgb(132, 0, 255);
+    margin-top: 10%;
+    margin-left: 38%;
+    width: 25%;
+    max-height: 70rem;
+    min-height: 10rem;
+    font-size: 2rem;
+    text-align: center;
+    color: hsl(0, 0%, 98%);
+    border-radius: 15px;
+}
+.vecifactura{
+font-size: 2.8rem;
+    font-family: 'Concert One', cursive;
+    color: orange;
+    text-shadow: 0.1em 0.1em 0.1em rgb(31, 31, 31);
+
+}
+/* 9. Publicidad */
+.publicidad{
+width: 82%;
+height: 400px;
+margin-left: 9%;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+background-image: url(image/publicidad.png);
+overflow: hidden;
+border-radius: 5px;
+}
+
+.publicidad .textos {
+margin-top: 130px;
+}
+
+/* 10.Seccion de footer - se encuentra en Index.html*/
+
+.footer .box-container {
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: rgb(132, 0, 255);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    flex: 1 1 20rem;
+}
+
+.footer .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer .box-container .box a {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+}
+
+.footer .box-container .box a:hover {
+    color: orange;
+}
+
+.footer .box-container .creado {
+    text-align: center;
+    width: 100%;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    padding-top: 2rem;
+    color: orange;
+}
+
+.footer .box-container .credit span {
+    color: rgb(132, 0, 255);
+}
+
+
+/* Media Queries referencias*/
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bar {
+        display: block;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        width: 100%;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+    header .navbar.active {
+        left: 0;
+    }
+    header .navbar a {
+        font-size: 2rem;
+        background: rgb(132, 0, 255);
+        border: .1rem solid var(--black);
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        display: block;
+        text-align: center;
+    }
+    .contenedor-home .slider .slide .image .text {
+        width: 60%;
+    }
+    .contenedor-home #prev,
+    .contenedor-home #next {
+        top: 85%;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        font-size: 50%;
+    }
+    .contenedor-home .slider .slide .image {
+        padding-bottom: 6rem;
+    }
+    .titulo {
+        font-size: 3rem;
+    }
+}
 

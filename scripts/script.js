@@ -53,6 +53,7 @@ function mostrarCards() {
     });
 
 }
+//Paso 2:
 //Integramos variables para el carrito productos-ofertas
 let noti = document.querySelector('h2');
 let contador = document.getElementById('contador');
