@@ -5,59 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-
-
-    <!-- Productos-->
-
     <header>
-
-        <div id="menu-bar" class="fas fa-bars"></div>
-        <a href="#" class="veci-Logo">Vecimarket</a>
-
-        <!--Navegacion-->
-        <nav class="navbar">
-            <a href="./index.html">Inicio</a>
-            <a href="./page/productos.html">Productos</a>
-            <a href="./page/ofertas.html">Ofertas</a>
-            <a href="#cocina">Catalogo</a>
-        </nav>
-
-        <!--Iconos de referencia para el usuario-->
-        <div class="icons">
-            <a href="page/carrito.html" class="fas fa-shopping-cart"></a>
-            <a href="#opinion" class="fas fa-user"></a>
-        </div>
-    </header>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <main>
         <br>
         <div id="container_info">
             <br>
-                <div class="producto">
-                    <p>Producto:</p>
-                    <div id="nombreProducto-contenedor">
-                        <!--Inserto P de Js-->
+            <div class="producto">
+                <p>Producto:</p>
+                <div id="nombreProducto-contenedor">
+                    <!--Inserto P de Js-->
+                </div>
+            </div>
+            <br>
+            <div class="total">
+                <p>total:</p>
+                <div id="totalProducto-contenedor"></div>
+            </div>
+
+            <a href="#" class="btn_limpiar" onclick="limpiarLista()"><i class="fas fa-trash-alt"></i></a>
+
+            <a href="#" class="money" onclick="" data-toggle="modal" data-target="#myModal"><button class="bton" onclick="myFunction()">Click me</button></a>
+            <a href="#" class="btn_limpiar" onclick=><i class="fas fa-share-square"></i></a>
+
+        </div>
+        <!-- Modal-->
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal contentido-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">VeciMarket</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <h1 class="formulario__titulo">Informacion de pago</h1>
+                        <form class="formulario">
+                            <input type="text" id="name" class="formulario__input" placeholder="Nombre" required>
+                            <input type="email" id="email" class="formulario__input" placeholder="Email" required>
+                            <input type="password" id="clave" class="formulario__input" placeholder="Ingresa tu clave" required>
+                            <button id="form_sumbit" class="formulario__submit">Enviar</button>
+                        </form>
                     </div>
                 </div>
-                <br>
-                <div class="total">
-                    <p>total:</p>
-                    <div id="totalProducto-contenedor"></div>
-                </div>
-        </div>
-        <br>
-        <a href="form-1.html"><button class="bton" onclick="myFunction()">Click me</button></a>
-        <br>
-    </main>
+
 
 </body>
-<!-- Enlaces Js-->
-<script src="../scripts/carrito.js"></script>
+<!-- Conex Js-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../scripts/script.js" type="module"></script>
+<script src="../scripts/carrito.js" type="module"></script>
+<script src="../scripts/form.js"></script>
+
 
 </html>
