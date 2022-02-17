@@ -26,6 +26,10 @@
         <div id="menu-bar" class="fas fa-bars"></div>
         <a href="../index.html" class="veci-Logo">Vecimarket</a>
 
+        <div class="icons">
+            <a href="../page/productos.html">Atrás</a>
+        </div>
+
     </header>
     <main>
 
@@ -46,9 +50,8 @@
                 <!--Inserto P de Js-->
             </div>
 
-            <a href="#" class="btn_limpiar"><button class="bton" onclick="myFunction()">Borrar</button></a>
-            <a href="#" class="money" onclick="" data-toggle="modal" data-target="#myModal"><button class="bton"
-                    onclick="myFunction()">Pagar</button></a>
+            <a href="#" class="btn_limpiar"><button class="bton">Borrar</button></a>
+            <a href="#" id="money" class="money" data-toggle="modal" data-target="#myModal"><button class="bton">Pagar</button></a>
 
             <br>
         </div>
@@ -63,20 +66,24 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">VeciMarket</h4>
+                    <h4 class="vecifactura">VeciMarket</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="modal-body">
 
-                    <h1 class="formulario__titulo">Informacion de pago</h1>
+                    <h1 class="formulario__titulo">Informacion de pago</h1><br>
                     <form class="formulario">
-                        <input type="text" id="name" class="formulario__input" placeholder="Nombre" required>
-                        <input type="email" id="email" class="formulario__input" placeholder="Email" required>
-                        <input type="password" id="clave" class="formulario__input" placeholder="Ingresa tu clave"
-                            required>
+                        <input type="text" id="nombre" class="formulario__input" placeholder="Nombre" required>
+                        <input type="tel" id="telefono" class="formulario__input" placeholder="Teléfono" required>
+                        <input type="tex" id="direccion" class="formulario__input" placeholder="Dirección" required><br><br>
+
+
                         <button id="form_sumbit" class="formulario__submit">Enviar</button>
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+
 
 
 </body>
@@ -87,7 +94,28 @@
         background-repeat: no-repeat;
         background-position: 40px 100px;
     }
+
+    .modal-header{
+        background-color: blueviolet;
+    }
+
+    .icons a {
+        text-decoration: none;
+    }
+    .formulario__submit{
+        color: black;
+    }
+
+    .ul{
+        margin: 30px;
+    }
+
+    .h{
+        font-weight: bold;
+    }
 </style>
+
+
 <!-- Conex Js-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

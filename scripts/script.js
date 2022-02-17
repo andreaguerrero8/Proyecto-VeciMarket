@@ -63,9 +63,13 @@ noti.value = 0;
 //escucha el evento click y captura el id del botón, posterior a ello lo envía a la funcion Envio Datos
 cards.addEventListener('click', (e) => {
     envioDatos(e.target.id);
+
     //Contador de carrito 
-    noti.value = parseInt(noti.value) + 1;
-    contador.innerHTML = noti.value;
+    if(e.target.classList.contains('btn')){
+        noti.value = parseInt(noti.value) + 1;
+        contador.innerHTML = noti.value;
+    }
+    
 })
 
 //se busca el elemento en la data mediante un forEach que contenga el id de la tarjeta oprimida
@@ -76,9 +80,9 @@ function envioDatos(id) {
 
             let algo =
             {
-                nombre: `${element.nombre}`,
-                precio: `${element.precio}`,
-                id: `${element.id}`
+                nombre: element.nombre,
+                precio: element.precio,
+                id: element.id
             }
 
             // agregar al arreglo datos, el objeto datos que contiene la informacion de la cards seleccionada

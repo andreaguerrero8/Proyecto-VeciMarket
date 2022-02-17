@@ -70,7 +70,7 @@ export const productos = [
             "id": 9,
             "nombre": "Crema Ego",
             "imagen": "../image/ego.jpg",
-            "precio": "8670",
+            "precio": "8.670",
             "categoria": "higiene"
 
         },

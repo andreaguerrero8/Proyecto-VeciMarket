@@ -1,3 +1,13 @@
+let btn_pagar = document.getElementById('money');
+btn_pagar.addEventListener('click', () => {
+
+    if(sumaTotal == 0){
+        alert('Agrega productos al carrito antes de llenar la información de envío')
+    }
+    
+});
+
+
 //Traer la informacion del localstorage
 //Declarar variable para asignar informacion del localstorage
 // Los articulos se encuentra dentro de un JSon que hay que manipular
@@ -38,4 +48,7 @@ btn_limp.addEventListener('click', () => {
 alert('Tu carrito esta vacio, regresa a VeciMarket');
 //Borrar lista de localstore
 localStorage.clear();
+
 });
+
+
